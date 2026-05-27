@@ -1,4 +1,6 @@
+
 import { brand, stats, team } from "../data/db.js";
+
 import "./About.css";
 
 const values = [

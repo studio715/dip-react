@@ -1,6 +1,7 @@
 import { services } from "../data/db.js";
 import "./Services.css";
 
+
 const icons = {
   home:      "M3 10.5L12 3l9 7.5V21a1 1 0 01-1 1H15v-5h-6v5H4a1 1 0 01-1-1V10.5z",
   building:  "M6 22V4a2 2 0 012-2h8a2 2 0 012 2v18z M6 12H4a2 2 0 00-2 2v8h4v-8z M18 9h2a2 2 0 012 2v11h-4V9z M10 6h4M10 10h4M10 14h4M10 18h4",

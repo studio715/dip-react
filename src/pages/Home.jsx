@@ -1,7 +1,17 @@
 import { useState, useEffect,  useRef } from "react";
 import "./Home.css";
 
+<<<<<<< HEAD
 import {stats,portals,services,projects as projectData,testimonials,} from "../data/db.js";
+=======
+import {
+  stats,
+  portals,
+  services,
+  projects as projectData,
+  testimonials,
+} from "../data/db.js";
+>>>>>>> e53d42a9aa1d85788208e594ac98442d4581f864
 
 /* ── Portal icon paths ──────────────────────────────────────── */
 const portalIcons = {
