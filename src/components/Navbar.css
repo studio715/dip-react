@@ -1,0 +1,328 @@
+/* ============================================================
+   Navbar.css — Responsive styles for Navbar component
+   Breakpoints: Desktop (820px+) | Mobile (< 820px)
+   ============================================================ */
+
+/* ── Nav wrapper (fixed to top) ─────────────────────────────── */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* ── Inner container ─────────────────────────────────────────── */
+  .navbar__inner {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 0 28px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* ── Logo ────────────────────────────────────────────────────── */
+  .navbar__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .navbar__logo-mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(244, 123, 32, 0.3);
+    flex-shrink: 0;
+  }
+  
+  .navbar__logo-text {
+    line-height: 1.2;
+  }
+  
+  .navbar__logo-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1f120d;
+    letter-spacing: -0.01em;
+  }
+  
+  
+  /* ── Desktop nav links ───────────────────────────────────────── */
+  .navbar__desktop {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .navbar__links {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  
+  .navbar__link {
+    padding: 7px 14px;
+    border-radius: 9px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #444;
+    transition: all 0.2s;
+  }
+  
+  .navbar__link:hover {
+    color: #f47b20;
+    background: rgba(244, 123, 32, 0.06);
+  }
+  
+  .navbar__link--active {
+    color: #f47b20;
+    background: rgba(244, 123, 32, 0.08);
+  }
+  
+  /* ── Portal Access button + dropdown ────────────────────────── */
+  .navbar__login-wrap {
+    position: relative;
+    margin-left: 12px;
+  }
+  
+  .navbar__login-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 20px;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #f47b20, #ff9447);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.86rem;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(244, 123, 32, 0.28);
+    transition: transform 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
+  }
+  
+  .navbar__login-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 26px rgba(244, 123, 32, 0.36);
+  }
+  
+  /* Dropdown */
+  .navbar__dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 260px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-radius: 18px;
+    padding: 10px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) scale(0.97);
+    transform-origin: top right;
+    transition: all 0.22s ease;
+    pointer-events: none;
+  }
+  
+  .navbar__dropdown--open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+  
+  .navbar__dropdown-header {
+    padding: 6px 14px 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 8px;
+  }
+  
+  .navbar__dropdown-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #9a8078;
+    text-transform: uppercase;
+  }
+  
+  /* Dropdown items */
+  .navbar__drop-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #1f120d;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.18s;
+    margin-bottom: 4px;
+    background: rgba(248, 245, 242, 0.6);
+  }
+  
+  .navbar__drop-item:hover {
+    background: rgba(244, 123, 32, 0.08);
+    color: #f47b20;
+  }
+  
+  .navbar__drop-item-label {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+  
+  .navbar__drop-item-sub {
+    font-size: 0.7rem;
+    color: #9a8078;
+  }
+  
+  
+  /* ── Mobile controls ─────────────────────────────────────────── */
+  .navbar__mobile {
+    display: none;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Mobile login button (smaller) */
+  .navbar__login-btn--mobile {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+  
+  /* Mobile dropdown (narrower) */
+  .navbar__dropdown--mobile {
+    width: 240px;
+  }
+  
+  /* Hamburger button */
+  .navbar__hamburger {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+  
+  .navbar__hamburger-bar {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.25s;
+  }
+  
+  /* Hamburger → X animation */
+  .navbar__hamburger--open .navbar__hamburger-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .navbar__hamburger--open .navbar__hamburger-bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .navbar__hamburger--open .navbar__hamburger-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  
+  /* Mobile nav popup */
+  .navbar__mobile-menu {
+    position: absolute;
+    top: 78px;
+    right: 16px;
+    width: 210px;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.14);
+    padding: 8px;
+    z-index: 200;
+  }
+  
+  .navbar__mobile-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 11px 14px;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+    transition: all 0.2s;
+  }
+  
+  .navbar__mobile-link:hover {
+    background: rgba(244, 123, 32, 0.06);
+    color: #f47b20;
+  }
+  
+  .navbar__mobile-link--active {
+    background: rgba(244, 123, 32, 0.08);
+    color: #f47b20;
+  }
+  
+  
+  /* ================================================================
+     MOBILE  (< 820px)
+     ================================================================ */
+  @media (max-width: 819px) {
+    .navbar__desktop { display: none; }
+    .navbar__mobile  { display: flex; }
+  
+    .navbar__inner { padding: 0 16px; }
+  }
+  
+  /* ================================================================
+     SMALL MOBILE  (< 480px)
+     ================================================================ */
+  @media (max-width: 479px) {
+  
+    .navbar__logo-mark { width: 36px; height: 36px; }
+  
+    .navbar__login-btn--mobile { padding: 7px 12px; font-size: 0.76rem; }
+  
+    .navbar__mobile-menu { right: 8px; width: 190px; }
+  
+    .navbar__dropdown--mobile { width: 210px; right: -8px; }
+  }
+  .navbar__logo-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+  }

@@ -1,0 +1,220 @@
+/* ============================================================
+   Footer.css — Responsive styles for Footer component
+   Breakpoints: Desktop (1024px+) | Tablet (768–1023px) | Mobile (<768px)
+   ============================================================ */
+
+/* ── Footer wrapper ──────────────────────────────────────────── */
+.footer {
+    background: #0f0a07;
+    color: white;
+    padding-top: 80px;
+  }
+  
+  /* ── Main grid ───────────────────────────────────────────────── */
+  .footer__grid {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 0 28px 64px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+  }
+  
+  /* ── Brand column (spans 2 cols on desktop) ─────────────────── */
+  .footer__brand {
+    grid-column: span 2;
+    max-width: 420px;
+  }
+  
+  .footer__brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .footer__brand-mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #f47b20, #ff9447);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .footer__brand-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: white;
+  }
+  
+  .footer__brand-sub {
+    font-size: 0.65rem;
+    color: #9a8078;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  
+  .footer__brand-desc {
+    color: #9a8078;
+    line-height: 1.85;
+    font-size: 0.92rem;
+  }
+  
+  /* Social icons */
+  .footer__socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+  }
+  
+  .footer__social-link {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.2s;
+    background: transparent;
+  }
+  
+  .footer__social-link:hover {
+    border-color: #f47b20;
+    background: rgba(244, 123, 32, 0.12);
+  }
+  
+  /* ── Column heading ──────────────────────────────────────────── */
+  .footer__col-heading {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #9a8078;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  /* ── Nav / Service link buttons ─────────────────────────────── */
+  .footer__nav-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    color: #9a8078;
+    font-size: 0.9rem;
+    padding: 6px 0;
+    text-align: left;
+    transition: color 0.2s;
+  }
+  
+  .footer__nav-btn:hover { color: #f47b20; }
+  
+  /* ── Contact items ───────────────────────────────────────────── */
+  .footer__contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  
+  .footer__contact-icon {
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  
+  .footer__contact-text {
+    color: #9a8078;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+  
+  /* ── Bottom bar ──────────────────────────────────────────────── */
+  .footer__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .footer__bottom-text {
+    color: #5a4840;
+    font-size: 0.85rem;
+  }
+  
+  
+  /* ================================================================
+     TABLET  (768px – 1023px)
+     ================================================================ */
+  @media (max-width: 1023px) {
+    .footer__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px;
+      padding: 0 24px 48px;
+    }
+  
+    .footer__brand {
+      grid-column: span 2;
+      max-width: 100%;
+    }
+  
+    .footer__bottom { padding: 20px 24px; }
+  }
+  
+  
+  /* ================================================================
+     MOBILE  (< 768px)
+     ================================================================ */
+  @media (max-width: 767px) {
+    .footer { padding-top: 52px; }
+  
+    .footer__grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 0 16px 40px;
+    }
+  
+    .footer__brand { grid-column: span 1; }
+  
+    .footer__brand-desc { font-size: 0.88rem; }
+  
+    .footer__bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 18px 16px;
+      gap: 6px;
+    }
+  
+    .footer__bottom-text { font-size: 0.8rem; }
+  }
+  
+  
+  /* ================================================================
+     SMALL MOBILE  (< 400px)
+     ================================================================ */
+  @media (max-width: 399px) {
+    .footer__socials { flex-wrap: wrap; }
+  
+    .footer__social-link { width: 34px; height: 34px; }
+  }
+
+  .footer__logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+  }
+  
+  .footer__brand-mark--plain {
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
