@@ -94,13 +94,52 @@
                       }`}
                     >
                       {toolMenus.map((t) => (
-                      <a key={t.id} href={t.href} target="_blank" rel="noopener noreferrer" className="navbar__tools-item">
-                        <div className="navbar__tools-item-content">
-                          <div className="navbar__tools-item-title">
-                            {t.label}
+                        <a key={t.id} href={t.href} target="_blank" rel="noopener noreferrer" className="navbar__tools-item">
+                          <div className="navbar__tools-item-content">
+
+                            <div
+                              className={`navbar__tools-item-icon ${
+                                t.id === "rate-analysis"
+                                  ? "navbar__tools-item-icon--rate"
+                                  : "navbar__tools-item-icon--comparison"
+                              }`}
+                            >
+                              {t.id === "rate-analysis" ? (
+                                <svg
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="2"
+                                >
+                                  <path d="M3 3v18h18" />
+                                  <path d="M7 14l3-3 3 2 4-5" />
+                                </svg>
+                              ) : (
+                                <svg
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="2"
+                                >
+                                  <path d="M10 3H3v7" />
+                                  <path d="M14 21h7v-7" />
+                                  <path d="M21 3l-7 7" />
+                                  <path d="M3 21l7-7" />
+                                </svg>
+                              )}
+                            </div>
+
+                            <div>
+                              <div className="navbar__tools-item-title">
+                                {t.label}
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </a>
+                        </a>
                       ))}
                     </div>
                   </div>

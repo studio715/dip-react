@@ -1,5 +1,15 @@
 
-import { brand, stats, team } from "../data/db.js";
+import {
+  brand,
+  stats,
+  team,
+} from "../data/db.js";
+
+import {
+  useState,
+  useEffect,
+  useRef,
+} from "react";
 
 import "./About.css";
 
@@ -20,6 +30,72 @@ const timeline = [
   { year: "2023", title: "50+ Projects Milestone", desc: "Crossed 50 successfully delivered projects across 8 cities in Gujarat." },
   { year: "2026", title: "Continued Growth", desc: "Expanding consultancy division and onboarding high-complexity infrastructure projects." },
 ];
+
+
+function CountUp({ value }) {
+  const [count, setCount] = useState(0);
+  const [started, setStarted] = useState(false);
+
+  const ref = useRef();
+
+  const finalValue = parseInt(
+    value.replace(/\D/g, "")
+  );
+
+  useEffect(() => {
+    const observer =
+      new IntersectionObserver(
+        ([entry]) => {
+          if (
+            entry.isIntersecting &&
+            !started
+          ) {
+            setStarted(true);
+          }
+        },
+        {
+          threshold: 0.4,
+        }
+      );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [started]);
+
+  useEffect(() => {
+    if (!started) return;
+
+    let start = 0;
+
+    const duration = 1800;
+
+    const increment =
+      finalValue / (duration / 16);
+
+    const timer = setInterval(() => {
+      start += increment;
+
+      if (start >= finalValue) {
+        setCount(finalValue);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+
+    return () => clearInterval(timer);
+  }, [started, finalValue]);
+
+  return (
+    <div ref={ref}>
+      {count}
+      {value.includes("+") ? "+" : ""}
+    </div>
+  );
+}
 
 export default function About({ navigate }) {
   return (
@@ -70,7 +146,9 @@ export default function About({ navigate }) {
           <div className="mission-stats">
             {stats.map((s) => (
               <div key={s.label} className="mission-stat-card">
-                <div className="mission-stat-value">{s.value}</div>
+                <div className="mission-stat-value">
+                  <CountUp value={s.value} />
+                </div>
                 <div className="mission-stat-label">{s.label}</div>
               </div>
             ))}
