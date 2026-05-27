@@ -59,7 +59,7 @@ export default function App() {
       <a href="https://www.dipprojects.com/" target="_blank" rel="noopener noreferrer" className="website-float">
         <img src="/website.png" alt="Website" className="website-icon" />
       </a>
-      <a href="https://wa.me/919876543210?text=Hello%20Dip%20Projects" target="_blank" rel="noopener noreferrer" className="whatsapp-float">
+      <a href="https://wa.me/919099406405?text=Hello%20Dip%20Projects" target="_blank" rel="noopener noreferrer" className="whatsapp-float">
       <img src="/whatsapp.png" alt="WhatsApp" className="whatsapp-icon"/>
       </a>
     </div>
