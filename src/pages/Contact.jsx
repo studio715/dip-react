@@ -86,7 +86,21 @@ export default function Contact({ navigate }) {
               </div>
               <div>
                 <div className="contact-info__label">{c.label}</div>
-                <div className="contact-info__value">{c.value}</div>
+                {/* <div className="contact-info__value">{c.value}</div> */}
+                {c.label === "Office Address" ? (
+                <a
+                  href="https://maps.app.goo.gl/wWmnhxCDZCnfbjZA6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-info__value contact-info__value--link"
+                >
+                  {c.value}
+                </a>
+              ) : (
+                <div className="contact-info__value">
+                  {c.value}
+                </div>
+              )}
               </div>
             </div>
           ))}

@@ -52,7 +52,7 @@ export default function Footer({ navigate }) {
           </div>
             <div>
               <div className="footer__brand-name">{brand.name}</div>
-              <div className="footer__brand-sub">Civil Project Management</div>
+              <div className="footer__brand-sub"><i>Where strategy meets execution.</i></div>
             </div>
           </div>
 

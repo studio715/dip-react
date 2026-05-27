@@ -1,14 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect,  useRef } from "react";
 import "./Home.css";
 
-import {
-  brand,
-  stats,
-  portals,
-  services,
-  projects as projectData,
-  testimonials,
-} from "../data/db.js";
+import {stats,portals,services,projects as projectData,testimonials,} from "../data/db.js";
 
 /* ── Portal icon paths ──────────────────────────────────────── */
 const portalIcons = {
@@ -19,13 +12,71 @@ const portalIcons = {
 
 /* ── StatCard ───────────────────────────────────────────────── */
 function StatCard({ value, label, delay }) {
+  const [count, setCount] = useState(0);
+  const [started, setStarted] = useState(false);
+
+  const ref = useRef();
+
+  // Extract number from "50+"
+  const finalValue = parseInt(value.replace(/\D/g, ""));
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started) {
+          setStarted(true);
+        }
+      },
+      {
+        threshold: 0.4,
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [started]);
+
+  useEffect(() => {
+    if (!started) return;
+
+    let start = 0;
+
+    const duration = 1800;
+    const increment = finalValue / (duration / 16);
+
+    const timer = setInterval(() => {
+      start += increment;
+
+      if (start >= finalValue) {
+        setCount(finalValue);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+
+    return () => clearInterval(timer);
+  }, [started, finalValue]);
+
   return (
     <div
+      ref={ref}
       className="stat-card"
-      style={{ animation: `fadeUp 0.7s ${delay}s ease both` }}
+      style={{
+        animation: `fadeUp 0.7s ${delay}s ease both`,
+      }}
     >
-      <div className="stat-num">{value}</div>
-      <div className="stat-label">{label}</div>
+      <div className="stat-num">
+        {count}
+        {value.includes("+") ? "+" : ""}
+      </div>
+
+      <div className="stat-label">
+        {label}
+      </div>
     </div>
   );
 }

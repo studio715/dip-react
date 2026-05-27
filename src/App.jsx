@@ -6,7 +6,7 @@ import About from "./pages/About.jsx";
 import Services from "./pages/Services.jsx";
 import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
-
+import "./App.css";
 export default function App() {
   const [page, setPage] = useState("home");
 
@@ -55,6 +55,13 @@ export default function App() {
         <PageComponent navigate={navigate} />
       </main>
       <Footer navigate={navigate} />
+
+      <a href="https://www.dipprojects.com/" target="_blank" rel="noopener noreferrer" className="website-float">
+        <img src="/website.png" alt="Website" className="website-icon" />
+      </a>
+      <a href="https://wa.me/919876543210?text=Hello%20Dip%20Projects" target="_blank" rel="noopener noreferrer" className="whatsapp-float">
+      <img src="/whatsapp.png" alt="WhatsApp" className="whatsapp-icon"/>
+      </a>
     </div>
   );
 

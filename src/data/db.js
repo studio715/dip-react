@@ -10,9 +10,9 @@ export const brand = {
     description:
       "Premium Civil Project Management Consultancy delivering excellence in residential, commercial, industrial and infrastructure development across Gujarat.",
     contact: {
-      phone: "+91 98765 43210",
-      email: "info@dipprojects.com",
-      address: "Surat, Gujarat, India — 395007",
+      phone: "+91 98253 44040",
+      email: "contact@diprojects.com",
+      address: "407/A Trinity Business Park, , L. P. Savani Rd, Madhuvan Cir, Adajan, Surat, Gujarat 395009",
     },
     social: {
       linkedin: "#",
@@ -36,6 +36,19 @@ export const brand = {
     { label: "Contact",  href: "#contact" },
   ];
   
+  export const toolMenus = [
+    {
+      id: "rate-analysis",
+      label: "Rate Analysis",
+      href: "https://script.google.com/macros/s/AKfycbxCIIYIFFng_m95MLK40RBbtC0XRHlDyLaTE1exgHRhwebLyd1v-fUaiB2g0kOrJfTl/exec",
+    },
+    {
+      id: "comparison",
+      label: "Comparision",
+      href: "https://script.google.com/macros/s/AKfycbxCIIYIFFng_m95MLK40RBbtC0XRHlDyLaTE1exgHRhwebLyd1v-fUaiB2g0kOrJfTl/exec",
+    },
+  ];
+
   export const portals = [
     {
       id: "client",

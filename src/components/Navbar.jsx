@@ -1,11 +1,13 @@
     import { useState, useEffect, useRef } from "react";
-    import { brand, navLinks, portals } from "../data/db.js";
+    import {brand,navLinks,portals,toolMenus} from "../data/db.js";
     import "./Navbar.css";
 
     export default function Navbar({ current, navigate }) {
-      const [loginOpen, setLoginOpen]           = useState(false);
+      const [toolsOpen, setToolsOpen]           = useState(false);
       const [mobileOpen, setMobileOpen]         = useState(false);
+      const [loginOpen, setLoginOpen] = useState(false);
       const [mobileLoginOpen, setMobileLoginOpen] = useState(false);
+      const [mobileToolsOpen, setMobileToolsOpen] = useState(false);
       const [mobile, setMobile]                 = useState(window.innerWidth < 820);
       const ref = useRef();
 
@@ -68,6 +70,40 @@
                       </button>
                     );
                   })}
+                  <div className="navbar__tools-wrap"onMouseEnter={() => setToolsOpen(true)}onMouseLeave={() => setToolsOpen(false)}>
+                    <button className="navbar__link navbar__tools-btn">
+                      Tools
+
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path d="M6 9l6 6 6-6" />
+                      </svg>
+                    </button>
+
+                    <div
+                      className={`navbar__tools-dropdown ${
+                        toolsOpen
+                          ? "navbar__tools-dropdown--open"
+                          : ""
+                      }`}
+                    >
+                      {toolMenus.map((t) => (
+                      <a key={t.id} href={t.href} target="_blank" rel="noopener noreferrer" className="navbar__tools-item">
+                        <div className="navbar__tools-item-content">
+                          <div className="navbar__tools-item-title">
+                            {t.label}
+                          </div>
+                        </div>
+                      </a>
+                      ))}
+                    </div>
+                  </div>
                 </div>
 
                 {/* Portal Access + dropdown */}
@@ -190,6 +226,45 @@
                         </button>
                       );
                     })}
+                    <div className="navbar__mobile-tools">
+
+                      <button
+                        className="navbar__mobile-tools-toggle" onClick={() => setMobileToolsOpen((v) => !v)}>
+                        <span>Tools</span>
+
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          className={
+                            mobileToolsOpen
+                              ? "navbar__mobile-tools-arrow navbar__mobile-tools-arrow--open"
+                              : "navbar__mobile-tools-arrow"
+                          }
+                        >
+                          <path d="M6 9l6 6 6-6" />
+                        </svg>
+                      </button>
+
+                      {mobileToolsOpen && (
+                        <div className="navbar__mobile-tools-dropdown">
+                          {toolMenus.map((t) => (
+                            <a
+                            key={t.id}
+                            href={t.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="navbar__mobile-tool-link"
+                          >
+                            {t.label}
+                          </a>
+                          ))}
+                        </div>
+                      )}
+                      </div>
                   </div>
                 )}
               </div>

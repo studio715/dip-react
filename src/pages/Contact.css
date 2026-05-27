@@ -20,7 +20,7 @@
   }
   
   .contact-header__breadcrumb {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 10px;
     margin-bottom: 16px;
@@ -61,6 +61,7 @@
     color: #ff9447;
     text-transform: uppercase;
     margin-bottom: 14px;
+    margin-top: 20px;
   }
   
   .contact-header__title {
@@ -560,4 +561,15 @@
       padding: 14px 18px 18px;
       font-size: 0.88rem;
     }
+  }
+
+  .contact-info__value--link {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .contact-info__value--link:hover {
+    color: #f47b20;
+    text-decoration: underline;
   }

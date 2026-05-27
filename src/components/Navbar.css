@@ -312,9 +312,9 @@
      ================================================================ */
   @media (max-width: 479px) {
   
-    .navbar__logo-mark { width: 36px; height: 36px; }
+    .navbar__logo-mark { width: 48px; height: 48px; }
   
-    .navbar__login-btn--mobile { padding: 7px 12px; font-size: 0.76rem; }
+    .navbar__login-btn--mobile { padding: 10px 12px; font-size: 0.78rem; }
   
     .navbar__mobile-menu { right: 8px; width: 190px; }
   
@@ -325,4 +325,185 @@
     height: 48px;
     object-fit: contain;
     display: block;
+  }
+
+/* =========================================
+   DESKTOP TOOLS DROPDOWN ONLY
+========================================= */
+
+.navbar__tools-wrap {
+  position: relative;
+}
+
+.navbar__tools-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* DROPDOWN */
+.navbar__tools-dropdown {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 0;
+  width: 200px;
+  background: white;
+  padding: 10px;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.12),
+    0 8px 24px rgba(244,123,32,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(10px);
+
+  transition: all 0.25s ease;
+
+  z-index: 999;
+}
+
+.navbar__tools-dropdown--open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ITEM */
+.navbar__tools-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-decoration: none;
+
+  padding: 14px 16px;
+
+  border-radius: 16px;
+
+  color: #1f120d;
+
+  transition: all 0.22s ease;
+}
+
+.navbar__tools-item:hover {
+  background: rgba(244,123,32,0.08);
+}
+
+/* LEFT CONTENT */
+.navbar__tools-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.navbar__tools-item-title {
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+  .navbar__mobile-tools {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+  }
+  
+  .navbar__mobile-tools-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #f47b20;
+    margin-bottom: 10px;
+    padding-left: 8px;
+  }
+  
+  .navbar__mobile-tool-link {
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: left;
+    padding: 12px 8px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: #1f120d;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .navbar__mobile-tool-link:hover {
+    background: rgba(244,123,32,0.08);
+    color: #f47b20;
+  }
+  .navbar__mobile-tools-toggle {
+    width: 100%;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1f120d;
+  }
+  
+  .navbar__mobile-tools-dropdown {
+    padding-left: 10px;
+    margin-top: 6px;
+  }
+  
+  .navbar__mobile-tools-arrow {
+    transition: transform 0.25s ease;
+  }
+  
+  .navbar__mobile-tools-arrow--open {
+    transform: rotate(180deg);
+  }
+
+  .navbar__mobile-tools-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+    padding-left: 12px;
+  }
+  
+  .navbar__mobile-tool-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 0.92rem;
+    color: #1f120d;
+    transition: all 0.2s ease;
+  }
+  
+  .navbar__mobile-tool-link:hover {
+    background: rgba(244,123,32,0.08);
+    color: #f47b20;
+  }
+  
+  .navbar__mobile-tools-toggle {
+    width: 100%;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1f120d;
+  }
+  
+  .navbar__mobile-tools-arrow {
+    transition: transform 0.25s ease;
+  }
+  
+  .navbar__mobile-tools-arrow--open {
+    transform: rotate(180deg);
   }

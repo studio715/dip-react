@@ -38,7 +38,7 @@
   .about-header__inner { max-width: 1380px; margin: 0 auto; }
   
   .about-header__breadcrumb {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 10px;
     margin-bottom: 16px;

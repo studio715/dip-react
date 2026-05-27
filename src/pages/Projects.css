@@ -16,11 +16,11 @@
   
   .projects-header__inner {
     max-width: 1380px;
-    margin: 0 auto;
+    margin: 10px 200px;
   }
   
   .projects-header__breadcrumb {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 10px;
     margin-bottom: 16px;
@@ -51,7 +51,8 @@
   }
   
   .projects-header__content {
-    max-width: 680px;
+    /* max-width: 680px; */
+    width: 100%
   }
   
   .projects-header__eyebrow {
@@ -61,6 +62,7 @@
     color: #ff9447;
     text-transform: uppercase;
     margin-bottom: 14px;
+    margin-top: 20px;
   }
   
   .projects-header__title {
@@ -363,6 +365,11 @@
       width: 100%;
       max-width: 320px;
     }
+    .projects-header__inner {
+        max-width: 1380px;
+        margin: 0 auto;
+      }
+      
   }
   
   /* ============================================================
@@ -446,4 +453,8 @@
     .projects-cta__btn {
       width: 100%;
     }
+    .projects-header__inner {
+        max-width: 1380px;
+        margin: 0 auto;
+      }
   }
