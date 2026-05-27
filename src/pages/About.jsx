@@ -1,4 +1,4 @@
-import { brand, stats, team, testimonials } from "../data/db.js";
+import { brand, stats, team} from "../data/db.js";
 import "./About.css";
 
 const values = [
