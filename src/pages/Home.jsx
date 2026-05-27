@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import "./Home.css";
 
 import {
-  brand,
   stats,
   portals,
   services,
