@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { brand, faqs } from "../data/db.js";
 import "./Contact.css";
+import emailjs from "@emailjs/browser";
 
 const contactInfo = [
   {
@@ -41,12 +42,51 @@ export default function Contact({ navigate }) {
   const [form, setForm] = useState({ name: "", email: "", phone: "", project: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
-
+  const [loading, setLoading] = useState(false);
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }));
-  const handleSubmit = e => {
+  // const handleSubmit = e => {
+  //   e.preventDefault();
+  //   setSubmitted(true);
+  // };
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
+  
+    setLoading(true);
+  
+    emailjs
+      .send(
+        "service_lrw1yjt",
+        "template_094l3ek",
+        {
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          project: form.project,
+          message: form.message,
+        },
+        "4UgVATVay3-q0KqxN"
+      )
+      .then(() => {
+        setSubmitted(true);
+  
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          project: "",
+          message: "",
+        });
+      })
+      .catch((err) => {
+        console.error(err);
+  
+        alert("Failed to send message.");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
+
 
   return (
     <div className="contact-page">
@@ -76,6 +116,15 @@ export default function Contact({ navigate }) {
 
       {/* CONTACT INFO CARDS */}
       <section className="contact-info">
+      <div className="contact-info__map-bg">
+        <iframe
+          title="Dip Projects Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.0205087808517!2d72.7828812860216!3d21.191344231907777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04d8a757f2d3b%3A0x16a8f8a6c0f0deb0!2sDip%20Projects%20(Project%20management%20consultant)!5e0!3m2!1sen!2sus!4v1779949677718!5m2!1sen!2sus"
+          loading="lazy"
+          allowFullScreen
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </div>
         <div className="contact-info__grid">
           {contactInfo.map(c => (
             <div key={c.label} className="contact-info__card">
@@ -201,8 +250,18 @@ export default function Contact({ navigate }) {
                   />
                 </div>
 
-                <button type="submit" className="contact-form__submit">
-                  Send Message
+                <button
+                  type="submit"
+                  className={`contact-form__submit ${
+                    loading
+                      ? "contact-form__submit--loading"
+                      : ""
+                  }`}
+                  disabled={loading}
+                >
+                  {loading
+                    ? "Sending Message..."
+                    : "Send Message"}
                 </button>
               </form>
             </>
