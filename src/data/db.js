@@ -45,7 +45,7 @@ export const brand = {
     {
       id: "comparison",
       label: "Comparision",
-      href: "https://script.google.com/macros/s/AKfycbxCIIYIFFng_m95MLK40RBbtC0XRHlDyLaTE1exgHRhwebLyd1v-fUaiB2g0kOrJfTl/exec",
+      href: "#comparison-coming-soon",
     },
   ];
 

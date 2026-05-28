@@ -91,10 +91,23 @@
                         toolsOpen
                           ? "navbar__tools-dropdown--open"
                           : ""
-                      }`}
-                    >
+                      }`}> 
+                    {/* use this when comparsion url comes 1)href={t.href} 2)remove onclick 3)target="_blank" for tool and mobile-toll both and add url in db,js*/}
                       {toolMenus.map((t) => (
-                        <a key={t.id} href={t.href} target="_blank" rel="noopener noreferrer" className="navbar__tools-item">
+                        <a key={t.id} href={
+                          t.id === "comparison"
+                            ? "#comparison-coming-soon"
+                            : t.href
+                        }onClick={(e) => {
+                          if (t.id === "comparison") {
+                            e.preventDefault();
+                            go("comparison-coming-soon");
+                          }
+                        }} target={
+                          t.id === "comparison"
+                            ? "_self"
+                            : "_blank"
+                        } rel="noopener noreferrer" className="navbar__tools-item">
                           <div className="navbar__tools-item-content">
 
                             <div
@@ -293,8 +306,22 @@
                           {toolMenus.map((t) => (
                             <a
                             key={t.id}
-                            href={t.href}
-                            target="_blank"
+                            href={
+                              t.id === "comparison"
+                                ? "#comparison-coming-soon"
+                                : t.href
+                            }
+                            onClick={(e) => {
+                              if (t.id === "comparison") {
+                                e.preventDefault();
+                                go("comparison-coming-soon");
+                              }
+                            }}
+                            target={
+                              t.id === "comparison"
+                                ? "_self"
+                                : "_blank"
+                            }
                             rel="noopener noreferrer"
                             className="navbar__mobile-tool-link"
                           >

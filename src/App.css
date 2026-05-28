@@ -40,10 +40,10 @@
   position: fixed;
   right: 24px;
   bottom: 24px;
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background: rgba(37,211,102,0.470);
+  background: rgba(37,211,102);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,8 +57,8 @@
 }
 
 .whatsapp-icon {
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
   display: block;
 }
@@ -67,11 +67,10 @@
   position: fixed;
   right: 24px;
   bottom: 100px;
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%; 
-  background: rgba(80, 170, 255, 0.470);
-  background: rgba(80, 170, 255,0.470);
+  background: rgb(49, 152, 248);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,22 +84,26 @@
 }
 
 .website-icon {
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
   object-fit: contain;
   display: block;
 }
 
 @media (max-width: 900px) {
-  .website-icon, .whatsapp-icon {
+  .website-icon{
     width: 24px;
     height: 24px;
   }
+  .whatsapp-icon {
+    width: 28px;
+    height: 28px;
+  }
   .website-float, .whatsapp-float {
-    width: 54px;
-    height: 54px;
+    width: 44px;
+    height: 44px;
   }
   .website-float{
-    bottom: 90px;
+    bottom: 80px;
   }
 }
