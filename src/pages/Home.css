@@ -1026,7 +1026,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 15px 28px;
+  padding: 15px 2px;
   border-radius: 14px;
   background: #25D366;
   color: white;
@@ -1174,6 +1174,7 @@
   .cta-contact-row { flex-direction: column; align-items: center; }
   .cta-actions { flex-direction: column; }
   .btn-whatsapp, .btn-cta { width: 100%; justify-content: center; }
+
 }
 
 
@@ -1187,4 +1188,12 @@
   .services-grid,
   .projects-grid { grid-template-columns: 1fr; }
   .why-pmc__grid { grid-template-columns: 1fr; }
+}
+
+.why-pmc__card--left {
+  text-align: left;
+}
+
+.why-pmc__card--right {
+  text-align: left;
 }

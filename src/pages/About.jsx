@@ -12,7 +12,7 @@ import {
 } from "react";
 
 import "./About.css";
-
+import img from "../chirag-shah.png";
 const values = [
   { icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z", title: "Uncompromising Quality", desc: "Every project is delivered to the highest standards with rigorous quality audits at each milestone." },
   { icon: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z", title: "Safety First", desc: "We maintain zero-tolerance safety protocols across all active sites, protecting workers and stakeholders." },
@@ -23,7 +23,7 @@ const values = [
 ];
 
 const timeline = [
-  { year: "2012", title: "Company Founded", desc: "Dip Projects established in Surat with a focus on residential construction management." },
+  { year: "1995", title: "Company Founded", desc: "Dip Projects established in Surat with a focus on residential construction management." },
   { year: "2015", title: "Commercial Expansion", desc: "Entered commercial segment with first Grade-A office project in Vadodara." },
   { year: "2018", title: "Industrial Division", desc: "Launched dedicated industrial infrastructure division serving manufacturing clients." },
   { year: "2021", title: "Digital Transformation", desc: "Deployed proprietary project management portals for clients and field engineers." },
@@ -117,7 +117,7 @@ export default function About({ navigate }) {
           <div className="about-header__content">
             <div className="about-header__label">Our Story</div>
             <h1 className="about-header__title">
-              Building Gujarat's Skyline Since 2012
+              Building Gujarat's Skyline Since 1995
             </h1>
             <p className="about-header__desc">{brand.description}</p>
           </div>
@@ -127,32 +127,55 @@ export default function About({ navigate }) {
       {/* ── MISSION + IMAGE ──────────────────────────────────── */}
       <section className="mission-section">
         <div>
-          <div className="mission-label">Our Mission</div>
-          <h2 className="mission-title">
-            Delivering Excellence Through Every Phase
-          </h2>
-          <p className="mission-text">
-            At Dip Projects, we believe that great construction is the product of
-            meticulous planning, disciplined execution, and genuine care for the
-            client's vision. We don't just manage projects — we build lasting
-            relationships.
-          </p>
-          <p className="mission-text">
-            Our team of certified engineers, experienced project managers, and
-            dedicated support staff work in unison to ensure that every project we
-            take on becomes a benchmark for quality in Gujarat's construction
-            industry.
-          </p>
-          <div className="mission-stats">
-            {stats.map((s) => (
-              <div key={s.label} className="mission-stat-card">
-                <div className="mission-stat-value">
-                  <CountUp value={s.value} />
+        <div className="mission-label">Vision & Mission</div>
+
+            <h2 className="mission-title">
+              Building Sustainable Value Through Engineering Excellence
+            </h2>
+
+            <div className="mission-block">
+              <h3 className="mission-subtitle">
+                Our Vision
+              </h3>
+              <div className="founder-divider"></div>
+
+              <p className="mission-text">
+                To create functional, efficient, and sustainable spaces through the power of
+                value engineering.
+              </p>
+            </div>
+
+            <div className="mission-block">
+              <h3 className="mission-subtitle">
+                Our Mission
+              </h3>
+              <div className="founder-divider"></div>
+
+              <ul className="mission-list">
+                <li>
+                  Deliver durable, serviceable, and green project outcomes.
+                </li>
+
+                <li>
+                  Offer project-specific solutions for varying complexity and scale.
+                </li>
+
+                <li>
+                  Implement systems that enhance accountability and efficiency.
+                </li>
+              </ul>
+            </div>
+
+            <div className="mission-stats">
+              {stats.map((s) => (
+                <div key={s.label} className="mission-stat-card">
+                  <div className="mission-stat-value">
+                    <CountUp value={s.value} />
+                  </div>
+                  <div className="mission-stat-label">{s.label}</div>
                 </div>
-                <div className="mission-stat-label">{s.label}</div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
         </div>
 
         <div className="mission-img-wrap">
@@ -162,6 +185,7 @@ export default function About({ navigate }) {
           />
         </div>
       </section>
+
 
       {/* ── VALUES ───────────────────────────────────────────── */}
       <section className="values-section">
@@ -187,6 +211,56 @@ export default function About({ navigate }) {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+{/* ── FOUNDER SECTION  ──────────────────────────────────── */}
+      <section className="founder-section">
+        <div className="founder-content">
+
+          <div className="founder-text">
+            <div className="mission-label">
+              Leadership
+            </div>
+
+            <h2 className="founder-title">
+              About The Founder – Mr. Chirag Shah
+            </h2>
+
+            <div className="founder-divider"></div>
+
+            <p>
+              At the heart of Dip Projects is
+              <strong> Mr. Chirag Shah</strong>,
+              a visionary leader with an unmatched understanding of
+              construction dynamics and on-ground execution.
+              With a career spanning nearly three decades,
+              Mr. Shah has led Dip Projects with a passion for
+              innovation, discipline, and client satisfaction.
+            </p>
+
+            <p>
+              Known for his <strong>hands-on approach</strong>,
+              Mr. Shah is deeply involved in every project phase,
+              ensuring that the company's core values—
+              <strong> integrity, transparency, and authenticity</strong>
+              —are reflected in every deliverable.
+            </p>
+
+            <p>
+              His ability to align strategy with execution has earned
+              Dip Projects the trust of repeat clients and established
+              the company as one of Gujarat's respected PMC firms.
+            </p>
+          </div>
+
+          <div className="founder-image">
+            <img
+              src={img}
+              alt="Mr. Chirag Shah"
+            />
+          </div>
+
         </div>
       </section>
 
@@ -219,16 +293,31 @@ export default function About({ navigate }) {
       <section className="team-section">
         <div className="team-inner">
           <div className="team-header">
-            <div className="team-label">The People</div>
-            <h2 className="team-title">Leadership Team</h2>
+            <div className="team-label">Meet the Minds Behind the Mission.</div>
+            <p className="team-title">Our Expert Team</p>
           </div>
           <div className="team-grid">
             {team.map((m) => (
-              <div key={m.id} className="team-card">
-                <div className="team-card__avatar">{m.avatar}</div>
-                <h3 className="team-card__name">{m.name}</h3>
-                <div className="team-card__role">{m.role}</div>
-                <p className="team-card__bio">{m.bio}</p>
+              <div key={m.id} className="team-member">
+
+                <div className="team-member__photo-wrap">
+                  <div className="team-member__photo-bg"></div>
+
+                  <img
+                    src={m.image}
+                    alt={m.name}
+                    className="team-member__photo"
+                  />
+                </div>
+
+                <h3 className="team-member__name">
+                  {m.name}
+                </h3>
+
+                <div className="team-member__role">
+                  {m.role}
+                </div>
+
               </div>
             ))}
           </div>

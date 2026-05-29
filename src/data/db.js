@@ -270,34 +270,60 @@ export const brand = {
     },
   ];
   
+  // export const team = [
+  //   {
+  //     id: 1,
+  //     name: "Dipak Chauhan",
+  //     role: "Founder & Managing Director",
+  //     bio: "20+ years in civil project management with a portfolio spanning residential, commercial, and industrial sectors across Gujarat.",
+  //     avatar: "DC",
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Anil Desai",
+  //     role: "Chief Technical Officer",
+  //     bio: "Structural engineering specialist with expertise in high-rise commercial and industrial projects. IIT Bombay alumnus.",
+  //     avatar: "AD",
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Meera Joshi",
+  //     role: "Head of Operations",
+  //     bio: "Drives project delivery systems, vendor management, and client relations across all active project sites.",
+  //     avatar: "MJ",
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Suresh Patel",
+  //     role: "Senior Project Manager",
+  //     bio: "PMP-certified professional with a track record of delivering complex multi-phase projects on schedule and within budget.",
+  //     avatar: "SP",
+  //   },
+  // ];
   export const team = [
     {
       id: 1,
-      name: "Dipak Chauhan",
-      role: "Founder & Managing Director",
-      bio: "20+ years in civil project management with a portfolio spanning residential, commercial, and industrial sectors across Gujarat.",
-      avatar: "DC",
+      name: "Mr. Jignesh Lad",
+      role: "PROJECT COORDINATOR",
+      image: "/team/p1.png",
     },
     {
       id: 2,
-      name: "Anil Desai",
-      role: "Chief Technical Officer",
-      bio: "Structural engineering specialist with expertise in high-rise commercial and industrial projects. IIT Bombay alumnus.",
-      avatar: "AD",
+      name: "Mr. Divyesh Rana",
+      role: "PROJECT COORDINATOR",
+      image: "/team/p2.png",
     },
     {
       id: 3,
-      name: "Meera Joshi",
-      role: "Head of Operations",
-      bio: "Drives project delivery systems, vendor management, and client relations across all active project sites.",
-      avatar: "MJ",
+      name: "Mrs. Nidhi Patel",
+      role: "HR",
+      image: "/team/p3.png",
     },
     {
       id: 4,
-      name: "Suresh Patel",
-      role: "Senior Project Manager",
-      bio: "PMP-certified professional with a track record of delivering complex multi-phase projects on schedule and within budget.",
-      avatar: "SP",
+      name: "Mr. Kishan Kalsariya",
+      role: "OFFICE HEAD ENGINEERING DIVISION",
+      image: "/team/p4.png",
     },
   ];
   

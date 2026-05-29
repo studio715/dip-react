@@ -7,8 +7,7 @@ import {
   portals,
   services,
   projects as projectData,
-  testimonials,
-  team,
+  testimonials
 } from "../data/db.js";
 
 /* ── Portal icon paths ──────────────────────────────────────── */
@@ -200,7 +199,7 @@ export default function Home({ navigate }) {
         <div className="about-strip__inner">
           <div className="about-strip__left">
             <div className="about-strip__avatar">
-              <span>DC</span>
+              <span>CS</span>
             </div>
             <div className="about-strip__badge">Founder</div>
           </div>
@@ -358,8 +357,15 @@ export default function Home({ navigate }) {
               title: "Single Contact",
               desc: "One professional interface for all consultants & contractors."
             }
-          ].map((w) => (
-            <div key={w.title} className="why-pmc__card">
+          ].map((w, index) => (
+            <div
+              key={w.title}
+              className={`why-pmc__card ${
+                index % 2 === 0
+                  ? "why-pmc__card--left"
+                  : "why-pmc__card--right"
+              }`}
+            >
               <div className="why-pmc__icon">
                 {w.icon}
               </div>
