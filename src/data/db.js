@@ -349,3 +349,31 @@ export const brand = {
       a: "Contact us via the form on our website or call our office directly. We schedule a site visit and provide a detailed scope and cost estimate within 5 working days.",
     },
   ];
+
+  export const reviewTemplates = [
+    "Dip Projects handled our residential project professionally from planning to execution. Communication was clear and the work quality exceeded expectations.",
+  
+    "Very reliable PMC team. Regular updates, strong site supervision, and timely delivery made the entire process stress-free.",
+  
+    "Excellent project management services. The team maintained transparency throughout the project and helped control costs effectively.",
+  
+    "We were impressed with the professionalism and technical knowledge of the Dip Projects team. Highly recommended for construction projects.",
+  
+    "From planning to completion, the team was responsive and committed to quality. A smooth experience overall.",
+  
+    "Dip Projects provided excellent coordination between consultants and contractors. The project was delivered on schedule.",
+  
+    "Outstanding attention to detail and strong project monitoring. Their expertise helped avoid delays and unnecessary expenses.",
+  
+    "Professional, transparent, and highly experienced. The project was executed efficiently and with great quality standards.",
+  
+    "A dependable PMC partner. Their planning and execution support gave us confidence throughout the construction journey.",
+  
+    "The team demonstrated excellent technical expertise and project control. We are very satisfied with the outcome.",
+  
+    "Great experience working with Dip Projects. The communication, reporting, and quality management were exceptional.",
+  
+    "The project was completed smoothly with regular updates and proactive problem-solving. Highly professional team.",
+
+    "Excellent project management and professional service. The team maintained complete transparency throughout the project and ensured timely delivery with quality workmanship. Highly recommended."
+  ];

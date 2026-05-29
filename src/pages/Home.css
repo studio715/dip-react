@@ -650,8 +650,11 @@
 /* Why PMC strip */
 .why-pmc {
   margin-top: 72px;
-  border-top: 1px solid rgba(255,255,255,0.07);
-  padding-top: 56px;
+  padding: 26px 10px;
+  background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 .why-pmc__label {
   font-size: 0.72rem;
@@ -1196,4 +1199,18 @@
 
 .why-pmc__card--right {
   text-align: left;
+}
+.about-strip__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.about-strip__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }

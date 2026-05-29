@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./Home.css";
-
+import img from "../chirag-shah.png";
 import {
   brand,
   stats,
@@ -9,6 +9,7 @@ import {
   projects as projectData,
   testimonials
 } from "../data/db.js";
+import Reviews from "./Reviews";
 
 /* ── Portal icon paths ──────────────────────────────────────── */
 const portalIcons = {
@@ -198,9 +199,9 @@ export default function Home({ navigate }) {
       <section className="about-strip">
         <div className="about-strip__inner">
           <div className="about-strip__left">
-            <div className="about-strip__avatar">
-              <span>CS</span>
-            </div>
+          <div className="about-strip__avatar">
+            <img src={img} alt="CS"/>
+          </div>
             <div className="about-strip__badge">Founder</div>
           </div>
           <div className="about-strip__body">
@@ -373,7 +374,7 @@ export default function Home({ navigate }) {
               <p className="why-pmc__desc">{w.desc}</p>
             </div>
           ))}
-              ))}
+            
             </div>
           </div>
         </div>
@@ -457,6 +458,11 @@ export default function Home({ navigate }) {
         </div>
       </section>
 
+      {/* ══════════════════════════════════════════════════════
+          Reviews
+      ══════════════════════════════════════════════════════ */}     
+      <Reviews/>
+      
       {/* ══════════════════════════════════════════════════════
           CTA  — WhatsApp-first
       ══════════════════════════════════════════════════════ */}
