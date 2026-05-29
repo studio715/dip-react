@@ -103,7 +103,7 @@ export default function Footer({ navigate }) {
               className="footer__nav-btn"
               onClick={() => navigate("services")}
             >
-              {s.title}
+              {s.foot_title}
             </button>
           ))}
         </div>
@@ -133,7 +133,7 @@ export default function Footer({ navigate }) {
           © 2026 {brand.name}. All Rights Reserved.
         </span>
         <span className="footer__bottom-text">
-          Built with precision. Delivered with trust.
+          <i>"Quality + Quantity"</i> - to be delivered on time.
         </span>
       </div>
     </footer>

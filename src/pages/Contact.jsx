@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { brand, faqs } from "../data/db.js";
 import "./Contact.css";
-import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";   
 
 const contactInfo = [
   {
@@ -278,7 +278,9 @@ export default function Contact({ navigate }) {
               Access your project dashboard directly through your dedicated portal.
             </p>
             <div className="contact-portals__list">
-              {portals.map(p => (
+            {portals
+                .filter(p => p.label === "Client Portal")
+                .map(p => (
                 <a
                   key={p.label}
                   href={p.href}
@@ -308,7 +310,6 @@ export default function Contact({ navigate }) {
               </div>
             ))}
           </div>
-
         </div>
       </section>
 

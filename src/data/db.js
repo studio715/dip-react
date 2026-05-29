@@ -8,7 +8,7 @@ export const brand = {
     tagline: "Where Strategy Meets Execution",
     taglineSub: "Quality + Quantity, Delivered on Time",
     description:
-      "Premium Civil Project Management Consultancy delivering excellence in residential, commercial, industrial and infrastructure development across Gujarat.",
+      "At Dip Projects, we don’t just manage construction — we orchestrate success.",
     contact: {
       phone: "+91 98253 44040",
       email: "contact@diprojects.com",
@@ -22,10 +22,10 @@ export const brand = {
   };
   
   export const stats = [
-    { value: "50+", label: "Projects Delivered" },
-    { value: "12+", label: "Years Experience" },
-    { value: "200+", label: "Satisfied Clients" },
-    { value: "8", label: "Cities Covered" },
+    { value: "200+", label: "Projects Delivered" },
+    { value: "30+", label: "Years Experience" },
+    { value: "150+", label: "Satisfied Clients" },
+    { value: "50+", label: "Associates" },
   ];
   
   export const navLinks = [
@@ -86,6 +86,7 @@ export const brand = {
     {
       id: "residential",
       title: "Residential Construction",
+      foot_title: "Quality Audit",
       shortDesc: "Bespoke homes crafted for modern living with precision engineering.",
       description:
         "From luxury villas to compact urban homes, we handle every phase of residential construction — design coordination, structural engineering, finishing, and handover.",
@@ -96,6 +97,7 @@ export const brand = {
     {
       id: "commercial",
       title: "Commercial Buildings",
+      foot_title: "Project Planning & Management",
       shortDesc: "High-performance commercial spaces built for business growth.",
       description:
         "Office complexes, retail spaces, and mixed-use developments — we deliver commercial projects on schedule without compromising safety or quality.",
@@ -106,6 +108,7 @@ export const brand = {
     {
       id: "industrial",
       title: "Industrial Infrastructure",
+      foot_title: "Project Co-ordination",
       shortDesc: "Robust industrial facilities engineered for durability and efficiency.",
       description:
         "Warehouses, factories, and processing facilities designed to withstand demanding operations while meeting all regulatory standards.",
@@ -116,6 +119,7 @@ export const brand = {
     {
       id: "management",
       title: "Project Management",
+      foot_title: "Tender & Estimate Preparation",
       shortDesc: "End-to-end project oversight so nothing falls through the cracks.",
       description:
         "Our certified project managers use structured methodologies to keep your project within budget, on schedule, and aligned with quality benchmarks.",
@@ -126,6 +130,7 @@ export const brand = {
     {
       id: "consultancy",
       title: "Civil Consultancy",
+      foot_title: "Third Party Inspection",
       shortDesc: "Expert guidance from concept to completion for complex projects.",
       description:
         "Technical consultation, feasibility studies, soil investigation interpretation, and structural reviews — backed by over a decade of site experience.",
@@ -136,12 +141,24 @@ export const brand = {
     {
       id: "renovation",
       title: "Renovation & Retrofitting",
+      foot_title: "MEP Service Mgmt & Co –",
       shortDesc: "Transform existing structures with modern upgrades and smart retrofitting.",
       description:
         "We breathe new life into aging buildings through careful renovation, seismic retrofitting, facade upgrades, and interior modernisation.",
       icon: "wrench",
       image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
       highlights: ["Structural assessment", "Facade restoration", "Seismic strengthening", "Interior upgrade"],
+    },
+    {
+      id: "mep",
+      title: "MEP Service Management & Co-ordination",
+      foot_title: "ordination",
+      shortDesc: "Seamless mechanical, electrical, and plumbing coordination across all project phases.",
+      description:
+        "We manage and coordinate all MEP disciplines — mechanical, electrical, plumbing, and fire-fighting systems — ensuring conflict-free installation, regulatory compliance, and smooth handover across residential, commercial, and industrial projects.",
+      icon: "tools",
+      image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+      highlights: ["MEP design coordination", "Site supervision & inspections", "Vendor & contractor management", "Commissioning & handover support"],
     },
   ];
   

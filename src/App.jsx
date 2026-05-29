@@ -21,7 +21,7 @@ export default function App() {
       const menuName =
         h.charAt(0).toUpperCase() + h.slice(1); 
       // Update tab title
-      document.title = `Dip Projects - ${menuName}`; 
+      document.title = `${menuName} - Dip Projects`; 
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -46,7 +46,7 @@ export default function App() {
     document.title = `Dip Projects - ${menuName}`;
   };
 
-  const pages = { home: Home, about: About, services: Services, projects: Projects, contact: Contact,   "comparison-coming-soon":ComparisonComingSoon };
+  const pages = { home: Home, about: About, services: Services, projects: Projects, contact: Contact,   "comparison-coming-soon"    :ComparisonComingSoon };
   const PageComponent = pages[page] || Home;
 
   return (
