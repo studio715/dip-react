@@ -7,11 +7,11 @@ import {
 } from "../data/db.js";
 import Reviews from "./Reviews";
 
-const portalIcons = {
-  client:   "M3 10.5L12 3l9 7.5V21a1 1 0 01-1 1H15v-5h-6v5H4a1 1 0 01-1-1V10.5z",
-  office:   "M3 3h18v18H3V3z M9 3v18 M3 9h18",
-  engineer: "M2 17h20v2a1 1 0 01-1 1H3a1 1 0 01-1-1v-2z M12 3a8 8 0 018 8v2H4v-2a8 8 0 018-8z",
-};
+// const portalIcons = {
+//   client:   "M3 10.5L12 3l9 7.5V21a1 1 0 01-1 1H15v-5h-6v5H4a1 1 0 01-1-1V10.5z",
+//   office:   "M3 3h18v18H3V3z M9 3v18 M3 9h18",
+//   engineer: "M2 17h20v2a1 1 0 01-1 1H3a1 1 0 01-1-1v-2z M12 3a8 8 0 018 8v2H4v-2a8 8 0 018-8z",
+// };
 const serviceIcons = {
   home:      "M3 10.5L12 3l9 7.5V21a1 1 0 01-1 1H15v-5h-6v5H4a1 1 0 01-1-1V10.5z",
   building:  "M6 22V4a2 2 0 012-2h8a2 2 0 012 2v18z M6 12H4a2 2 0 00-2 2v8h4v-8z M18 9h2a2 2 0 012 2v11h-4V9z",

@@ -34,8 +34,7 @@
     max-width: 700px;
     min-height: 150px;  
     padding: 24px;  
-    border: 1px solid #f47b20;
-      
+    border: 1px solid #f47b20;   
     background: white;  
     color: #4a3b34;  
     font-size: 1rem;  
@@ -170,6 +169,7 @@
   @media(max-width:999px){
     .review-helper textarea {
         width: 240px;
+        font-size: 0.8rem;
       }
   }
 

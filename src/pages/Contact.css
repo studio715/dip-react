@@ -46,7 +46,7 @@
   }
   
   .contact-header__breadcrumb {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 10px;
     margin-bottom: 36px;

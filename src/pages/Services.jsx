@@ -12,12 +12,12 @@ const icons = {
 };
 
 const process = [
-  { step: "01", title: "Initial Consultation",  desc: "We meet to understand your vision, requirements, site conditions, and budget expectations." },
-  { step: "02", title: "Feasibility & Proposal", desc: "Our team prepares a detailed scope, timeline, and cost proposal within 5 working days." },
-  { step: "03", title: "Planning & Design",      desc: "Coordinating structural, architectural, and MEP designs with all relevant approvals." },
-  { step: "04", title: "Construction Phase",     desc: "Rigorous on-site execution with daily progress tracking and quality audits at every milestone." },
-  { step: "05", title: "Quality Audit",          desc: "Independent quality checks before any phase sign-off to ensure zero defects at handover." },
-  { step: "06", title: "Handover & Support",     desc: "Formal handover with complete documentation, warranties, and post-completion support." },
+  { step: "01", title: "Initial Consultation",   desc: "We meet to understand your vision, requirements, site conditions, and budget expectations." },
+  { step: "02", title: "Feasibility & Proposal",  desc: "Our team prepares a detailed scope, timeline, and cost proposal within 5 working days." },
+  { step: "03", title: "Planning & Design",       desc: "Coordinating structural, architectural, and MEP designs with all relevant approvals." },
+  { step: "04", title: "Construction Phase",      desc: "Rigorous on-site execution with daily progress tracking and quality audits at every milestone." },
+  { step: "05", title: "Quality Audit",           desc: "Independent quality checks before any phase sign-off to ensure zero defects at handover." },
+  { step: "06", title: "Handover & Support",      desc: "Formal handover with complete documentation, warranties, and post-completion support." },
 ];
 
 export default function Services({ navigate }) {
@@ -25,128 +25,123 @@ export default function Services({ navigate }) {
   const active = services.find((s) => s.id === activeId);
 
   return (
-    <div className="services-wrapper">
+    <div className="sv">
 
-      {/* ── PAGE HEADER ──────────────────────────────────────── */}
-      <section className="svc-hero">
-        <div className="svc-hero__inner">
-          <div className="svc-hero__breadcrumb">
-            <button className="svc-hero__bc-btn" onClick={() => navigate("home")}>Home</button>
-            <span className="svc-hero__bc-sep">/</span>
-            <span className="svc-hero__bc-current">Services</span>
-          </div>
-          <h1 className="svc-hero__title">Our Services</h1>
-          <p className="svc-hero__sub">
+      {/* ── HERO ─────────────────────────────────── */}
+      <section className="sv-hero">
+        <div className="sv-hero-inner">
+          <nav className="sv-breadcrumb">
+            <button onClick={() => navigate("home")}>Home</button>
+            <span>/</span>
+            <span className="sv-breadcrumb-cur">Services</span>
+          </nav>
+          <span className="sv-eyebrow">What We Offer</span>
+          <h1 className="sv-hero-h1">Our Services</h1>
+          <p className="sv-hero-sub">
             End-to-end project management consultancy — from feasibility to final handover.
           </p>
         </div>
-        <div className="svc-hero__overlay" />
+        <div className="sv-hero-deco" />
       </section>
 
-      {/* ── TWO-COLUMN LAYOUT ─────────────────────────────────── */}
-      <section className="svc-body">
-        <div className="svc-body__inner">
+      {/* ── TWO-COLUMN BODY ──────────────────────── */}
+      <section className="sv-body">
+        <div className="sv-body-inner">
 
-          {/* LEFT SIDEBAR */}
-          <aside className="svc-sidebar">
-            <div className="svc-sidebar__label">Services</div>
-            <nav className="svc-sidebar__nav">
+          {/* SIDEBAR */}
+          <aside className="sv-sidebar">
+            <div className="sv-sidebar-label">Services</div>
+            <nav className="sv-sidebar-nav">
               {services.map((s) => (
                 <button
                   key={s.id}
-                  className={`svc-sidebar__item${activeId === s.id ? " svc-sidebar__item--active" : ""}`}
+                  className={`sv-nav-item${activeId === s.id ? " sv-nav-item--on" : ""}`}
                   onClick={() => setActiveId(s.id)}
                 >
-                  <svg
-                    className="svc-sidebar__icon"
-                    width="16" height="16" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" strokeWidth="1.8"
-                    strokeLinecap="round" strokeLinejoin="round"
-                  >
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
+                    className="sv-nav-icon">
                     <path d={icons[s.icon] || icons.tools} />
                   </svg>
-                  {s.title}
-                  <span className="svc-sidebar__arrow">›</span>
+                  <span className="sv-nav-text">{s.title}</span>
+                  <span className="sv-nav-arrow">›</span>
                 </button>
               ))}
             </nav>
-
-            {/* CTA box in sidebar */}
-            <div className="svc-sidebar__cta">
-              <p className="svc-sidebar__cta-text">
+            <div className="sv-sidebar-cta">
+              <p className="sv-sidebar-cta-text">
                 Need a tailored solution for your project?
               </p>
-              <button
-                className="svc-sidebar__cta-btn"
-                onClick={() => navigate("contact")}
-              >
+              <button className="sv-sidebar-cta-btn" onClick={() => navigate("contact")}>
                 Get a Consultation
               </button>
             </div>
           </aside>
 
-          {/* MAIN CONTENT */}
-          <main className="svc-main" key={activeId}>
-            {/* Service image */}
-            <div className="svc-main__img-wrap">
-              <img src={active.image} alt={active.title} className="svc-main__img" />
-              <div className="svc-main__img-badge">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                  stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          {/* MAIN */}
+          <main className="sv-main" key={activeId}>
+            <div className="sv-main-img-wrap">
+              <img src={active.image} alt={active.title} className="sv-main-img" />
+              <div className="sv-main-img-overlay" />
+              <div className="sv-main-img-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                   <path d={icons[active.icon] || icons.tools} />
                 </svg>
                 {active.title}
               </div>
             </div>
 
-            {/* Service body */}
-            <div className="svc-main__content">
-              <h2 className="svc-main__title">{active.title}</h2>
-              <p className="svc-main__desc">{active.description}</p>
-
-              <div className="svc-main__section-label">Key Deliverables</div>
-              <ul className="svc-main__deliverables">
+            <div className="sv-main-card">
+              <h2 className="sv-main-title">{active.title}</h2>
+              <p className="sv-main-desc">{active.description}</p>
+              <div className="sv-deliverables-label">Key Deliverables</div>
+              <ul className="sv-deliverables">
                 {active.highlights.map((h, i) => (
-                  <li key={h} className="svc-main__deliverable">
-                    <span className="svc-main__d-num">{String(i + 1).padStart(2, "0")}.</span>
-                    <span className="svc-main__d-text">{h}</span>
+                  <li key={h} className="sv-deliverable">
+                    <span className="sv-deliverable-num">{String(i + 1).padStart(2, "0")}.</span>
+                    <span className="sv-deliverable-text">{h}</span>
                   </li>
                 ))}
               </ul>
             </div>
           </main>
+
         </div>
       </section>
 
-      {/* ── PROCESS ──────────────────────────────────────────── */}
-      <section className="process-section">
-        <div className="process-inner">
-          <div className="process-header">
-            <div className="process-label">How We Work</div>
-            <h2 className="process-title">Our Delivery Process</h2>
+      {/* ── PROCESS ──────────────────────────────── */}
+      <section className="sv-process">
+        <div className="sv-process-inner">
+          <div className="sv-process-header">
+            <span className="sv-eyebrow sv-eyebrow--gold">How We Work</span>
+            <h2 className="sv-process-h2">Our Delivery Process</h2>
           </div>
-          <div className="process-grid">
+          <div className="sv-process-grid">
             {process.map((p) => (
-              <div key={p.step} className="process-card">
-                <div className="process-card__step">{p.step}</div>
-                <h3 className="process-card__title">{p.title}</h3>
-                <p className="process-card__desc">{p.desc}</p>
+              <div key={p.step} className="sv-process-card">
+                <div className="sv-process-step">{p.step}</div>
+                <div className="sv-process-step-div" />
+                <h3 className="sv-process-title">{p.title}</h3>
+                <p className="sv-process-desc">{p.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CTA ──────────────────────────────────────────────── */}
-      <section className="services-cta-section">
-        <div className="services-cta-inner">
-          <div>
-            <h2 className="services-cta-title">Need a custom service solution?</h2>
-            <p className="services-cta-text">
-              Our consultants can design a tailored project management framework for your specific requirements.
+      {/* ── CTA ──────────────────────────────────── */}
+      <section className="sv-cta">
+        <div className="sv-cta-inner">
+          <div className="sv-cta-text">
+            <span className="sv-cta-eyebrow">Work With Us</span>
+            <h2 className="sv-cta-h2">Need a Custom Service Solution?</h2>
+            <p className="sv-cta-sub">
+              Our consultants can design a tailored project management framework
+              for your specific requirements.
             </p>
           </div>
-          <button className="services-cta-btn" onClick={() => navigate("contact")}>
+          <button className="sv-cta-btn" onClick={() => navigate("contact")}>
             Request a Consultation
           </button>
         </div>
