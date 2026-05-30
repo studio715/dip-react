@@ -155,7 +155,6 @@ export default function About({ navigate }) {
                 <li>
                   Deliver durable, serviceable, and green project outcomes.
                 </li>
-
                 <li>
                   Offer project-specific solutions for varying complexity and scale.
                 </li>
@@ -165,7 +164,7 @@ export default function About({ navigate }) {
                 </li>
               </ul>
             </div>
-
+            
             <div className="mission-stats">
               {stats.map((s) => (
                 <div key={s.label} className="mission-stat-card">

@@ -40,7 +40,7 @@ export const brand = {
     {
       id: "rate-analysis",
       label: "Rate Analysis",
-      href: "https://script.google.com/macros/s/AKfycbxCIIYIFFng_m95MLK40RBbtC0XRHlDyLaTE1exgHRhwebLyd1v-fUaiB2g0kOrJfTl/exec",
+      href: "https://script.google.com/macros/s/AKfycbwJzFqZxRUkgrBb1jdZUfnS9C8rWD9nU8jr3BSt2Pugbt8U-3Gfnf1W1kWRUG83E1xX/exec",
     },
     {
       id: "comparison",
@@ -270,47 +270,17 @@ export const brand = {
     },
   ];
   
-  // export const team = [
-  //   {
-  //     id: 1,
-  //     name: "Dipak Chauhan",
-  //     role: "Founder & Managing Director",
-  //     bio: "20+ years in civil project management with a portfolio spanning residential, commercial, and industrial sectors across Gujarat.",
-  //     avatar: "DC",
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Anil Desai",
-  //     role: "Chief Technical Officer",
-  //     bio: "Structural engineering specialist with expertise in high-rise commercial and industrial projects. IIT Bombay alumnus.",
-  //     avatar: "AD",
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Meera Joshi",
-  //     role: "Head of Operations",
-  //     bio: "Drives project delivery systems, vendor management, and client relations across all active project sites.",
-  //     avatar: "MJ",
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "Suresh Patel",
-  //     role: "Senior Project Manager",
-  //     bio: "PMP-certified professional with a track record of delivering complex multi-phase projects on schedule and within budget.",
-  //     avatar: "SP",
-  //   },
-  // ];
   export const team = [
     {
       id: 1,
       name: "Mr. Jignesh Lad",
-      role: "PROJECT COORDINATOR",
+      role: "PROJECT HEAD",
       image: "/team/p1.png",
     },
     {
       id: 2,
       name: "Mr. Divyesh Rana",
-      role: "PROJECT COORDINATOR",
+      role: "PROJECT HEAD",
       image: "/team/p2.png",
     },
     {
@@ -350,30 +320,58 @@ export const brand = {
     },
   ];
 
-  export const reviewTemplates = [
-    "Dip Projects handled our residential project professionally from planning to execution. Communication was clear and the work quality exceeded expectations.",
+  export const reviewTemplates = {
+    residential: [
+      "Dip Projects handled our residential project professionally from planning to execution. Communication was clear and the work quality exceeded expectations.",
   
-    "Very reliable PMC team. Regular updates, strong site supervision, and timely delivery made the entire process stress-free.",
+      "Very reliable PMC team. Regular updates, strong site supervision, and timely delivery made the entire process stress-free.",
   
-    "Excellent project management services. The team maintained transparency throughout the project and helped control costs effectively.",
+      "The team ensured excellent quality control throughout our bungalow construction. We are extremely satisfied with the outcome.",
   
-    "We were impressed with the professionalism and technical knowledge of the Dip Projects team. Highly recommended for construction projects.",
+      "Our residential project was completed smoothly with proper planning, budgeting, and execution support from Dip Projects.",
   
-    "From planning to completion, the team was responsive and committed to quality. A smooth experience overall.",
+      "Professional guidance and regular updates gave us confidence throughout the construction journey.",
   
-    "Dip Projects provided excellent coordination between consultants and contractors. The project was delivered on schedule.",
+      "The project was delivered with great attention to detail and strong quality standards. Highly recommended.",
   
-    "Outstanding attention to detail and strong project monitoring. Their expertise helped avoid delays and unnecessary expenses.",
+      "Dip Projects helped us avoid delays and maintained excellent coordination between all contractors.",
   
-    "Professional, transparent, and highly experienced. The project was executed efficiently and with great quality standards.",
+      "Very transparent and responsive team. The entire process was managed professionally from start to finish."
+    ],
   
-    "A dependable PMC partner. Their planning and execution support gave us confidence throughout the construction journey.",
+    commercial: [
+      "Excellent project management services. The team maintained transparency throughout the project and helped control costs effectively.",
   
-    "The team demonstrated excellent technical expertise and project control. We are very satisfied with the outcome.",
+      "We were impressed with the professionalism and technical knowledge of the Dip Projects team. Highly recommended for commercial projects.",
   
-    "Great experience working with Dip Projects. The communication, reporting, and quality management were exceptional.",
+      "Outstanding project monitoring and reporting. We always knew the project status and upcoming activities.",
   
-    "The project was completed smoothly with regular updates and proactive problem-solving. Highly professional team.",
-
-    "Excellent project management and professional service. The team maintained complete transparency throughout the project and ensured timely delivery with quality workmanship. Highly recommended."
-  ];
+      "The project was completed smoothly and within the planned budget. Highly appreciate the team's professionalism.",
+  
+      "Strong coordination between consultants, contractors, and vendors ensured successful project delivery.",
+  
+      "The team's attention to detail and commitment to quality were evident from day one.",
+  
+      "Professional project planning and execution support helped us achieve our business objectives on time.",
+  
+      "Dip Projects demonstrated excellent leadership and project control throughout the commercial development."
+    ],
+  
+    industrial: [
+      "Dip Projects provided excellent coordination between consultants and contractors. The project was delivered on schedule.",
+  
+      "Outstanding attention to detail and strong project monitoring. Their expertise helped avoid delays and unnecessary expenses.",
+  
+      "Professional, transparent, and highly experienced. The project was executed efficiently and with great quality standards.",
+  
+      "The team demonstrated excellent technical expertise and project control. We are very satisfied with the outcome.",
+  
+      "Excellent management of industrial project activities with strong focus on safety and quality.",
+  
+      "The team maintained strict timelines and ensured smooth coordination between all stakeholders.",
+  
+      "A dependable PMC partner with deep understanding of industrial infrastructure requirements.",
+  
+      "Their systematic approach and technical expertise contributed significantly to project success."
+    ]
+  };

@@ -43,7 +43,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 16px rgba(244, 123, 32, 0.3);
     flex-shrink: 0;
   }
   
@@ -106,7 +105,6 @@
     align-items: center;
     gap: 8px;
     padding: 9px 20px;
-    border-radius: 11px;
     background: linear-gradient(135deg, #f47b20, #ff9447);
     color: white;
     border: none;
@@ -132,7 +130,7 @@
     width: 260px;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
-    border-radius: 18px;
+    /* border-radius: 18px; */
     padding: 10px;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.14);
     border: 1px solid rgba(255, 255, 255, 0.6);
@@ -208,8 +206,9 @@
   
   /* Mobile login button (smaller) */
   .navbar__login-btn--mobile {
-    padding: 8px 16px;
-    font-size: 0.8rem;
+    padding: 14px 18px;
+    font-size: 0.80rem;
+
   }
   
   /* Mobile dropdown (narrower) */
@@ -261,7 +260,7 @@
     right: 16px;
     width: 210px;
     background: white;
-    border-radius: 16px;
+    /* border-radius: 16px; */
     border: 1px solid rgba(0, 0, 0, 0.08);
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.14);
     padding: 8px;
@@ -311,13 +310,9 @@
      SMALL MOBILE  (< 480px)
      ================================================================ */
   @media (max-width: 479px) {
-  
-    .navbar__logo-mark { width: 48px; height: 48px; }
-  
-    .navbar__login-btn--mobile { padding: 10px 12px; font-size: 0.78rem; }
-  
-    .navbar__mobile-menu { right: 8px; width: 190px; }
-  
+    .navbar__logo-mark { width: 48px; height: 48px; }  
+    .navbar__login-btn--mobile { padding: 14px 18px; font-size: 0.80rem;} 
+    .navbar__mobile-menu { right: 8px; width: 190px; }  
     .navbar__dropdown--mobile { width: 210px; right: -8px; }
   }
   .navbar__logo-img {
@@ -425,7 +420,7 @@
     background: transparent;
     text-align: left;
     padding: 12px 8px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     font-size: 0.95rem;
     color: #1f120d;
     cursor: pointer;
@@ -460,30 +455,23 @@
   
   .navbar__mobile-tool-link {
     display: block;
-  
-    width: 100%;
-  
-    box-sizing: border-box;
-  
-    padding: 12px 14px;
-  
-    border-radius: 14px;
-  
-    text-decoration: none;
-  
+    width: 100%; 
+    box-sizing: border-box;  
+    padding: 12px 14px; 
+    /* border-radius: 14px;  */
+    text-decoration: none; 
     color: #1f120d;
-  
     overflow: hidden;
   }
   
   /* BLUE */
   .navbar__mobile-tool-link:first-child {
-    border: 1px solid rgb(20, 20, 165);
+    border: 1px solid #f19753;
   }
   
   /* COFFEE */
   .navbar__mobile-tool-link:last-child {
-    border:1px solid rgb(141, 32, 5);
+    border:1px solid #f19753;
   }
 
 
