@@ -388,7 +388,7 @@
      border: 3px solid #e8e0d4;
      box-shadow: 0 16px 48px rgba(0,0,0,0.1);
    }
-   .about-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+   .about-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; object-position: center 25%; }
    
    .about-badge-wrap {
      display: flex;
