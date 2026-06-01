@@ -115,10 +115,10 @@ export default function Reviews() {
         );
   
       const mobileLink =
-        "https://www.google.com/search?sca_esv=fd85c60ee94a050f&sxsrf=ANbL-n5XyR72ikTT_e5UCbwL8B2Kux2Vyg:1780123038876&q=dip+projects+reviews&uds=ALYpb_n4_4R3TXfRbIE0QK-84RdSa6E1exp7XBWAibgQNZ73xVQkx1mmxkbA3W7z0lgnnVuyVp8UzPHyU7r1pe-xPhjHbmIfqyy5xS1oSekJ-Nt5wZlnqUWU8A0-TytPEPO-HwV14cMUX-FITZWIMd7LnqDqI9qiGbDVOhSMyyqBqS2cxkWY5Cx349uLjifnz6Q3ADNJjIhsz8HPH0mK74u4NZZT4Gg-RqiUR8ovEE-RbS-qwvCgNr4XIto4o0n24XzjizKYdabLrTDs_a2XFPuDSl28j0y9Jhtml55-2IRGySls5FzgAiADTxgel_MT7q78vWiY69rQY4ykgYonBB0_H-slsNSjgx5PKGPsHC_lbHTvR0SM9QnZ2AbPobn9lecSrYatg4-1&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOX6wP335fpFgyxFPB-SeEhnsjggzuIaZLBJOjqPzpdyesR_gu-A0ko8XjIkgLOgRFxMYRIcCCdYm4Lbtz837QwGYRhu4&sa=X&ved=2ahUKEwiz042Ls-CUAxXGT0EAHY5NCMoQk8gLegQIIBAB&ictx=1&biw=354&bih=752&dpr=3.5#ebo=2";
+        "https://g.page/r/CbDe8MCm-KgWEAE/review";
   
       const desktopLink =
-        "https://www.google.com/search?sca_esv=fd85c60ee94a050f&sxsrf=ANbL-n6TUy1jlHjVw9XBceAhgyqceCbShA:1780123258319&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOX6wP335fpFgyxFPB-SeEhns_yR5r-_kkRhyvVTTU2Th7TrMpEfh3oCHZvG6ZE2U5irVVSeyzoP62WzdcecLVyEbX2CtIYR9SDki61x1HNeyhwd3rDJi_D5oQGZLnKyifCX2rDc%3D&q=Dip+Projects+%28Project+management+consultant%29+Reviews&sa=X&ved=2ahUKEwj4wt_zs-CUAxUihGMGHV_dDDoQ0bkNegQIHRAF&biw=1920&bih=945&dpr=1#lrd=0x3be04d8a757f2d3b:0x16a8f8a6c0f0deb0,3,,,,";
+        "https://g.page/r/CbDe8MCm-KgWEAE/review";
   
       setTimeout(() => {
         window.location.href = isMobile
