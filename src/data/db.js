@@ -61,16 +61,6 @@ export const brand = {
       accent: "#f47b20",
     },
     {
-      id: "office",
-      title: "Office Portal",
-      subtitle: "For Management & Admin",
-      description:
-        "Manage operations, teams, approvals, billing, and the complete project pipeline from a unified dashboard.",
-      href: "https://script.google.com/macros/s/AKfycbzy1Zhk4L04Y0LJM84VvPTI4tCn_IjBkMNYFwXB8JN-PZfueNjC731E-8Ohz0D109qz/exec",
-      features: ["Team management", "Workflow approvals", "Financial overview", "Report generation"],
-      accent: "#2a6496",
-    },
-    {
       id: "engineer",
       title: "Site Engineer Portal",
       subtitle: "For On-Site Engineers",
@@ -79,6 +69,16 @@ export const brand = {
       href: "https://script.google.com/macros/s/AKfycbz76SAsGFH8WZxj5FFVhCxMiWvPb8pq1uCX5j4Lg9qC46gC3Q9hYjWpdOWOCFBNQuQQzQ/exec",
       features: ["Daily log uploads", "Photo documentation", "Progress reports", "Issue flagging"],
       accent: "#1a7a4a",
+    },
+    {
+      id: "office",
+      title: "Office Portal",
+      subtitle: "For Management & Admin",
+      description:
+        "Manage operations, teams, approvals, billing, and the complete project pipeline from a unified dashboard.",
+      href: "https://script.google.com/macros/s/AKfycbzy1Zhk4L04Y0LJM84VvPTI4tCn_IjBkMNYFwXB8JN-PZfueNjC731E-8Ohz0D109qz/exec",
+      features: ["Team management", "Workflow approvals", "Financial overview", "Report generation"],
+      accent: "#2a6496",
     },
   ];
   
