@@ -15,9 +15,9 @@ export const brand = {
       address: "407/A Trinity Business Park, , L. P. Savani Rd, Madhuvan Cir, Adajan, Surat, Gujarat 395009",
     },
     social: {
-      linkedin: "#",
-      instagram: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/company/dip-projectsofficial/",
+      instagram: "https://www.instagram.com/dipprojectsofficial?igsh=dzNiZ2RiZzNpaTd3",
+      facebook: "https://www.facebook.com/share/1JYvE89qpQ/",
     },
   };
   
